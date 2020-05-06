@@ -5,9 +5,9 @@ const messageSchema = new mongoose.Schema({
         required:true,
         trim:true
     },
-    Seen:{
-        type:Boolean,
-        default:false
+    type:{
+        type:String,
+        default:'message'
     },
     from:{
         type:mongoose.Schema.Types.ObjectId,
