@@ -14,14 +14,8 @@ const messageSchema = new mongoose.Schema({
         required:true,
         ref:'user'
     },
-    to:{
-        type:mongoose.Schema.Types.ObjectId,
-        required:true,
-        ref:'user'
-    },
     reply:{
         type:mongoose.Schema.Types.ObjectId,
-        required:true,
         ref:'Messages'
     },
 },{
