@@ -2,7 +2,7 @@ import React,{Component} from 'react'
 import {Redirect} from 'react-router-dom'
 import './login.css'
 import{Link} from 'react-router-dom'
-// import { Login } from '../../API/user';
+import { LoginReq } from '../../API/user';
 class Login extends Component{
     constructor(props){
         super(props)
@@ -20,10 +20,9 @@ class Login extends Component{
     handleLogin=e=>{
         e.preventDefault()
         const {userName,password}=this.state
-        Login({userName,password}).then(res=>{
+        LoginReq({userName,password}).then(res=>{
             localStorage.setItem('userToken',res.token)
-            localStorage.setItem('userType',res.userType)
-            window.location.replace('/')
+            window.location.replace('/messages')
         })
     }
     redirectSignUp(e){

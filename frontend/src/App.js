@@ -4,6 +4,7 @@ import './App.css';
 import { Route, BrowserRouter, Redirect } from 'react-router-dom'
 import Login from './components/login/login';
 import SignUp from './components/signup/signup';
+import Messages from './components/messages/messages';
 // import createHistory from 'history/createBrowserHistory'
 function App() {
   // history = createHistory()
@@ -14,6 +15,7 @@ function App() {
         
         <Route exact path='/' component={Login}/>
         <Route exact path='/signup' component={SignUp}/>
+        <Route exact path='/messages' component={Messages}/>
       </div>
     </BrowserRouter>
   );

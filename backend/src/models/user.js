@@ -35,18 +35,11 @@ userSchema.methods.generateAuthToken=async function()
 {
     const user=this
     const token=JWT.sign({_id:user._id.toString()},"GUESTBOOKAPP")
-    console.log(token)
-    console.log('-------------------')
-    if(user.tokens){
+    // console.log(token)
+    // console.log('-------------------')
     user.tokens=user.tokens.concat({token})
     await user.save()
-    
-    }else{
-        user.tokens=[{token}]
-        await user.save()
-
-    }
-    console.log(user)
+    // console.log(user)
     return token
 }
 userSchema.pre('save',async function(next){

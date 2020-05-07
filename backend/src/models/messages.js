@@ -12,7 +12,7 @@ const messageSchema = new mongoose.Schema({
     from:{
         type:mongoose.Schema.Types.ObjectId,
         required:true,
-        ref:'user'
+        ref:'users'
     },
     reply:{
         type:mongoose.Schema.Types.ObjectId,

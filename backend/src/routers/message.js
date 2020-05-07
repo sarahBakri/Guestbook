@@ -16,7 +16,7 @@ router.post('/message',user,async(req,res)=>{
 })
 router.get('/messages',user,async(req,res)=>{
     try{
-        const messages = await Message.find({type:"message"}).populate('reply')
+        const messages = await Message.find({type:"message"}).populate('from').populate('reply')
         res.status(200).send(messages)
     }
     catch(e){

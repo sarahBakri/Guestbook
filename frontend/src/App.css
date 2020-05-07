@@ -6,7 +6,7 @@
 body{
   text-align: center;
   background-image: url('/background.jpg');
-  background-repeat: repeat;
+  background-repeat: repeat;    
 }
  
 .App-logo {

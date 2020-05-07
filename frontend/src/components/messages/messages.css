@@ -1,0 +1,14 @@
+.Mheader{
+    background-color: rgba(187,171,155,0.6);
+}
+.RContainer{
+    background-color: rgba(187,171,155,0.3); 
+    border-radius: 20px;
+}
+.MContainer{
+    background-color: rgba(241, 232, 222, 0.9) ;
+    border-radius: 30px;
+}
+.text-lightbrown{
+   color : rgb(185, 140, 95);
+}
